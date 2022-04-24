@@ -19,3 +19,6 @@ function pares(array) {
 console.log('Filtro de pares com função ' + pares(numArray));
 
 
+let array23 = [1, 2, 3, 4];
+
+console.log(array23.filter((item) => item % 2 === 0));

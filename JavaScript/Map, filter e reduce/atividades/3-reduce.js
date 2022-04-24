@@ -4,7 +4,9 @@ console.log(meuArray.reduce(function (inicio, vlAtual) {
     return inicio + vlAtual;
 }, 0));
 
-lista = [
+console.log(meuArray)
+
+listaProdutos = [
     {
         preco: 2,
         nome: 'maçã'
@@ -19,9 +21,9 @@ lista = [
     }
 ];
 
-function calculaSaldo(saldo, itens) {
-    const saldoFinal = itens.reduce((acc, item) => acc - item.preco, saldo);
+function calculaSaldo(saldo, produto) {
+    const saldoFinal = produto.reduce((acc, item) => acc - item.preco, saldo);
     return `O saldo final será de ${saldoFinal} reais`;
 }
 
-console.log(calculaSaldo(60, lista))
+console.log(calculaSaldo(60, listaProdutos))
