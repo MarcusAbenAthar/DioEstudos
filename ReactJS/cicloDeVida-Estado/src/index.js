@@ -1,8 +1,5 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
-import Btn1 from './Button'
-import ComponentA from './ComponentA'
-import ComponentB from './ComponentB'
 import './styles.css'
 
 function soma(a, b) {
