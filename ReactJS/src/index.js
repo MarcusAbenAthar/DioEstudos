@@ -1,18 +1,39 @@
-import React from "react"
+import React, { Component } from "react"
 import { createRoot } from "react-dom/client"
 import './styles.css'
 
-function soma(a, b) {
-    alert(a + b)
-}
+class App extends Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            clock: 1000,
+            copo: 'água'
+        }
+    }
 
-function App() {
+    componentDidMount() {
+        window.setTimeout(() => {
+            this.setState({
+                copo: 'Suco'
+            })
+        }, 2000)
+    }
 
-    return (
-        <div className="App">
-            Hello World!
-        </div>
-    )
+    alterarCopo = () => {
+        this.setState({
+            copo: 'Refrigerante'
+        })
+    }
+
+    render() {
+        const { clock, copo } = this.state
+        return (
+            <div>
+                <h1>{this.state.clock}</h1>
+                <button onClick={() => this.alterarCopo()}>{copo}</button>
+            </div>
+        )
+    }
 }
 
 const rootElement = createRoot(document.getElementById("root"));
