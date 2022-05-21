@@ -12,6 +12,7 @@ public class Conta {
 	@Column(name= "conta_saldo")
 	private Double saldo;
 	
+	
 	public void setNumero(Long numero) {
 		this.numero = numero;
 	}
@@ -28,5 +29,5 @@ public class Conta {
 		return saldo;
 	}
 	
-	
+
 }
